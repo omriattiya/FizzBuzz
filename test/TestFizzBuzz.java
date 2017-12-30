@@ -59,4 +59,22 @@ public class TestFizzBuzz {
     {
         assertEquals("Buzz, ", game.output_at(100));
     }
+
+    //The requirements are number between 2 to 100 - checking the upper limit
+    @Test
+    public void test_more_then_upper_limit()
+    {
+        assertEquals("ERROR", game.FizzBuzz(101));
+        assertEquals("ERROR", game.FizzBuzz(1000));
+        assertEquals("ERROR", game.FizzBuzz(102));
+    }
+
+    //The requirements are number between 2 to 100 - checking the bottom limit
+    @Test
+    public void test_less_then_bottom_limit()
+    {
+        assertEquals("ERROR", game.FizzBuzz(1));
+        assertEquals("ERROR", game.FizzBuzz(0));
+        assertEquals("ERROR", game.FizzBuzz(-1));
+    }
 }

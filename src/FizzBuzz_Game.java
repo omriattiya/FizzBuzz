@@ -7,6 +7,8 @@ public class FizzBuzz_Game {
 
     public String FizzBuzz(int n)
     {
+        if(n>100 || n<2)
+            return "ERROR";
         gameOutput = "";
 
         for(int i=1; i<=n; i++)
